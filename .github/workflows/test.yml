@@ -15,5 +15,7 @@ jobs:
       - name: Print vars
         env:
           GLOBAL_SECRET: ${{ secrets.GLOBAL_SECRET }}
+          MY_SECRET: ${{ secrets.MY_SECRET }}
         run: |
           echo "The value is ${GLOBAL_SECRET:-global_secret}"
+          echo "The value is ${MY_SECRET:-my_secret}"
