@@ -11,12 +11,9 @@ on:
 jobs:
   main:
     runs-on: ubuntu-latest
-    environment: PR
     steps:
       - name: Print vars
         env:
           GLOBAL_SECRET: ${{ secrets.GLOBAL_SECRET }}
-          ENV_SECRET: ${{ secrets.ENV_SECRET }}
         run: |
           echo "The value is ${GLOBAL_SECRET:-global_secret}"
-          echo "The value is ${ENV_SECRET:-env_secret}"
