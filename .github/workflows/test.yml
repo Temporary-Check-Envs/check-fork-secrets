@@ -11,6 +11,7 @@ on:
 jobs:
   main:
     runs-on: ubuntu-latest
+    environment: PR
     steps:
       - name: Print vars
         env:
